@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Ants Map Creator</title>
+    <script defer src="map.js"></script>
+</head>
+<body style="margin:0px;">
+    <div style="display: flex; justify-content: center;">
+        <canvas style="flex: 1; max-width:800px; height: 800px;" id="can" width="800" height="800"></canvas>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <p style="margin-right: 10px;"><a href="index.html">Ant Simulator</a></p>
+        <p>Map Creator</a>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <div style="display: flex; justify-content: center; flex-direction: column;">
+            <div style="display: flex; justify-content: center;">
+                <p>Currently Selected Element: </a>
+                <p id="selection">Wall</a>
+            </div>
+            <p>Controls:</p>
+            <ul style="margin-top: 0px;">
+                <li>Click and drag to place the selected element onto the grid.</li>
+                <li>Placing an element in a position it already exists removes it.</li>
+                <li>Press right-click while dragging to cancel placement.</li>
+                <li>Press '1' to select the Wall element.</li>
+                <li>Press '2' to select the Food element.</li>
+                <li>Press 'l' to load map json data.</li>
+                <li>Press 's' to save map json data.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -52,6 +52,16 @@ function randomRange(min, max) {
     return Math.random()*(max-min)+min;
 }
 
+function getWrapppingNeighbors(arr, index, neighbourDistance) {
+    let neighborHood = [];
+    for (let i = index-neighbourDistance; i <= index+neighbourDistance; i++) {
+        let curIndex = i % arr.length;
+        if (curIndex < 0) curIndex = arr.length+(curIndex);
+        neighborHood.push(arr[curIndex]);
+    }
+    return neighborHood;
+}
+
 function createMap(size, min, max) {
     let map = [];
     for (let i = 0 ; i < size; i++) {
@@ -63,12 +73,48 @@ function createMap(size, min, max) {
     return map;
 }
 
+function mapSumAtIndex(map1, map2, x, y) {
+    return map1[x][y] + map2[x][y];
+}
+
+function dist(x1, y1, x2, y2) {
+    return Math.sqrt((y2-y1)**2 + (x1-x2)**2);
+}
+
+function wrap(value, min, max) {
+    value%=max;
+    if (value < min) value = max+value;
+    return value;
+}
+
+function getIndexOfDirection(x, y) {
+    for(let i = 0; i < dirs.length; i++) {
+        if (dirs[i].x == x && dirs[i].y == y)
+            return i;
+    }
+    return -1;
+}
+
 function indexOfLargest(arr) {
     let max = -Infinity;
     let index = -1;
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] > max) {
+            console.log();
             max = arr[i];
+            index = i;
+        }
+    }
+    return index;
+}
+
+function indexOfSmallest(arr) {
+    let min = Infinity;
+    let index = -1;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < min) {
+            console.log();
+            min = arr[i];
             index = i;
         }
     }

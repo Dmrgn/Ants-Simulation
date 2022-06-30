@@ -32,3 +32,38 @@ const dirs = [
         y:1
     }
 ];
+
+const sampleLocs = [
+    { // middle left
+        x:-5,
+        y:0
+    },
+    { // up left
+        x:-3,
+        y:-3
+    },
+    { // up middle
+        x:0,
+        y:-5
+    },
+    { // up right
+        x:3,
+        y:-3
+    },
+    { // middle right
+        x:5,
+        y:0
+    },
+    { // down right
+        x:3,
+        y:3
+    },
+    { // down
+        x:0,
+        y:5
+    },
+    { // down left
+        x:-3,
+        y:3
+    }
+];
