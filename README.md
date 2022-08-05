@@ -15,5 +15,5 @@ Ant colony simulation written in pure JavaScript.
 <p>Still interested?</p>
 <ul style="margin-top: 0px;">
     <li>This project was inspired by <a href="https://youtu.be/X-iSQQgOd1A">a youtube video</a> create by <a href="https://www.youtube.com/c/SebastianLague">Sebatian Lague</a> which goes into more detail.</li>
-    <li>The project is being hosted <a href="https://github.com/Dmrgn/Ants-Simulation">here</a></li>
+    <li>The project is being hosted <a href="https://antcolony.netlify.app/">here</a></li>
 </ul>
